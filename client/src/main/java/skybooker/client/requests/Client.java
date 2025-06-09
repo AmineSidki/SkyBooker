@@ -8,7 +8,7 @@ import skybooker.client.exceptions.ExceptionHandler;
 import okhttp3.*;
 
 public class Client {
-    private static final String url = "http://localhost:8080/api/v1";
+    private static final String url = "http://192.168.11.101:8080/api/v1";
     private static final OkHttpClient client = new OkHttpClient();
     private static String token = "";
     private static boolean loggedIn = false;

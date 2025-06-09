@@ -43,6 +43,8 @@ public class FlightInfoController {
             departure.setText(aeroportDepart.getIataCode() + " " + vol.getHeureDepart());
             arrival.setText(aeroportArrive.getIataCode() + " " + vol.getHeureArrive());
 
+            reservationPrice = 0.0;
+
             // TODO : This could be optimised by porting the logic to the backend
             for (ReservationDTO.PassagerData passagerData : PreferencesController.getChosenPassagers()) {
                 PassagerDTO passagerDTO = ClientCache.get(passagerData.getPassagerId(), PassagerDTO.class);
